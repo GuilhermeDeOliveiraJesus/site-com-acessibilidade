@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>JobFinder - Encontre seu próximo emprego</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <h1 class="logo">JobFinder</h1>
+            <nav class="main-nav">
+                <a href="#">Buscar Vagas</a>
+                <a href="#">Para Empresas</a>
+                <a href="#" class="btn btn-login">Login</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="search-filters" aria-label="Busca de vagas">
+            <h2>Encontre a vaga perfeita para você</h2>
+            <form class="search-form" role="search">
+                <div class="form-group">
+                    <label for="keyword">Cargo ou palavra-chave</label>
+                    <input type="text" id="keyword" name="keyword" placeholder="Ex: Desenvolvedor Front-end">
+                </div>
+                <div class="form-group">
+                    <label for="location">Localização</label>
+                    <input type="text" id="location" name="location" placeholder="Ex: São Paulo, SP">
+                </div>
+                <button type="submit" class="btn search-button">Buscar</button>
+            </form>
+        </section>
+
+        <section class="job-listings" aria-label="Vagas em destaque">
+            <h3>Vagas em destaque</h3>
+
+            <article class="job-card">
+                <div class="job-card-header">
+                    <h4 class="job-title">Desenvolvedor(a) Front-End Pleno</h4>
+                    <span class="job-type remote">Remoto</span>
+                </div>
+                <div class="job-card-body">
+                    <p class="company-name">Tech Solutions Inc.</p>
+                    <p class="location">São Paulo, SP (Remoto)</p>
+                    <p class="job-description">Procuramos um desenvolvedor Front-end com experiência em React, TypeScript e CSS moderno para se juntar à nossa equipe inovadora.</p>
+                </div>
+                <div class="job-card-footer">
+                    <a href="#" class="btn apply-button">Ver Detalhes</a>
+                </div>
+            </article>
+
+            <article class="job-card">
+                <div class="job-card-header">
+                    <h4 class="job-title">Analista de UX/UI Sênior</h4>
+                    <span class="job-type hybrid">Híbrido</span>
+                </div>
+                <div class="job-card-body">
+                    <p class="company-name">Creative Minds</p>
+                    <p class="location">Rio de Janeiro, RJ</p>
+                    <p class="job-description">Lidere projetos de design de experiência do usuário, desde a pesquisa inicial até a prototipagem e testes com usuários finais.</p>
+                </div>
+                <div class="job-card-footer">
+                    <a href="#" class="btn apply-button">Ver Detalhes</a>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <div class="accessibility-container">
+        <div id="accessibility-options-panel" class="accessibility-options is-hidden" aria-hidden="true">
+            <h4>Ajustes de Acessibilidade</h4>
+
+            <div class="option-group">
+                <p>Tamanho da Fonte</p>
+                <div class="button-group">
+                    <button id="btn-decrease-font" title="Diminuir Fonte" aria-label="Diminuir fonte">-</button>
+                    <button id="btn-increase-font" title="Aumentar Fonte" aria-label="Aumentar fonte">+</button>
+                </div>
+            </div>
+
+            <div class="option-group">
+                <p>Contraste / Daltonismo</p>
+                <div class="button-group">
+                    <!-- cada botão tem data-theme com a chave que nosso script entende -->
+                    <button class="theme-button" id="btn-theme-default" data-theme="default" title="Padrão" aria-label="Tema padrão">P</button>
+                    <button class="theme-button" id="btn-theme-high-contrast" data-theme="high-contrast" title="Alto Contraste" aria-label="Alto contraste">AC</button>
+                    <button class="theme-button" id="btn-theme-protanopia" data-theme="protanopia" title="Protanopia" aria-label="Protanopia">PR</button>
+                    <button class="theme-button" id="btn-theme-deuteranopia" data-theme="deuteranopia" title="Deuteranopia" aria-label="Deuteranopia">DE</button>
+                    <button class="theme-button" id="btn-theme-tritanopia" data-theme="tritanopia" title="Tritanopia" aria-label="Tritanopia">TR</button>
+                </div>
+            </div>
+        </div>
+
+        <button id="accessibility-trigger-btn" title="Abrir Painel de Acessibilidade" aria-expanded="false" aria-controls="accessibility-options-panel">
+            <span class="material-symbols-outlined">accessible</span>
+        </button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
